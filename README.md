@@ -155,7 +155,48 @@ This query extracts task and event-level data from a CAFM system to provide visi
 - Date/time formatting and transformation  
 - Conditional filtering with AND/OR logic  
 - Parameterisation for reusable queries  
-- Structuring outputs for reporting (Power BI / operational dashboards)  
+- Structuring outputs for reporting (Power BI / operational dashboards)
+
+### Task Resource and Lifecycle Analysis
+
+**Overview**  
+This query analyses the full lifecycle of tasks within a CAFM system, including timing, resource allocation, and completion data.
+
+**Purpose**
+- Track tasks from creation through to completion  
+- Analyse task assignment and resource usage  
+- Provide visibility into task timelines and performance  
+- Support contract-level reporting and analysis  
+
+**Key Features**
+- Combines task, building, contract, and resource data  
+- Tracks multiple lifecycle stages:
+  - Logged date  
+  - Start date  
+  - Finish date  
+  - Estimated due date  
+- Identifies the most recent resource assigned to each task using window functions  
+- Flags whether resources are internal or external  
+- Uses parameterised filtering for contract-level analysis (anonymised)  
+
+**Tables Used**
+- F_TASKS  
+- FLOCATE  
+- F_CONTRACT_GROUP  
+- SLA_TASK_PERFORMANCE  
+- F_TASK_TIME  
+- F_RESOURCE  
+
+**Skills Demonstrated**
+- SQL joins across multiple relational tables  
+- Window functions (ROW_NUMBER for latest record selection)  
+- Task lifecycle analysis  
+- Date/time formatting and transformation  
+- Resource allocation tracking  
+- Parameterisation for reusable queries  
+
+**File**
+`Task_Resource_Analysis.sql`
 
 **File**
 `Task_Event_Analysis.sql`
