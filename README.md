@@ -85,3 +85,41 @@ This query extracts account and licence information from a CAFM system to suppor
 
 **File**
 `User_Licence.sql`
+
+### Task Monitoring and SLA Analysis
+
+**Overview**  
+This query extracts task-level data from a CAFM system to support performance monitoring and SLA tracking across buildings and contracts.
+
+**Purpose**
+- Track task progress and status  
+- Identify late or overdue tasks  
+- Provide RAG (Red/Amber/Green) status for operational reporting  
+- Support performance analysis across locations and buildings  
+
+**Key Features**
+- Combines task, building, location, and performance data  
+- Formats date and time fields for reporting (DD/MM/YYYY HH:MM)  
+- Calculates number of days since estimated due date  
+- Applies RAG status logic:
+  - **Red** = overdue  
+  - **Amber** = due today  
+  - **Green** = not yet due  
+- Flags late tasks using conditional logic  
+
+**Tables Used**
+- F_TASKS  
+- FLOCATE  
+- FAREALO  
+- F_CONTRACT  
+- SLA_TASK_PERFORMANCE  
+
+**Skills Demonstrated**
+- SQL joins across multiple relational tables  
+- Date/time handling and formatting  
+- Business logic using CASE statements  
+- KPI calculation (Days, RAG, Late flags)  
+- Preparing structured outputs for reporting (Power BI / dashboards)  
+
+**File**
+`Task_SLA_Analysis.sql`
