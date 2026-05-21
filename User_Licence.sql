@@ -1,4 +1,12 @@
----Account License
+
+-- =============================================
+-- Project: Account Licence Management
+-- Description:
+-- Retrieves account-level information including licence,
+-- status (locked/disabled), and audit details for reporting.
+-- Context:
+-- Based on CAFM system data used for user and licence management
+-- =============================================
 
 select
 ac.AccountId as 'Account ID',
@@ -8,8 +16,9 @@ ac.Description as 'Account Description',
 l.Name as 'Licence',
 convert(varchar(10),ac.[CreatedDate],103) as 'Created Date',
 case
-when ac.AccountId=ac.CreatedBy
-then ac.LoginName
+when ac.AccountId = ac.CreatedBy then ac.LoginName
+else null
+end as 'Created By',
 end as 'Created By',
 convert(varchar(10),aC.[ModifiedDate],103) as 'Modified Date',
 case
