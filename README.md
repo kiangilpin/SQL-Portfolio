@@ -123,3 +123,41 @@ This query extracts task-level data from a CAFM system to support performance mo
 
 **File**
 `Task_SLA_Analysis.sql`
+
+### Task Event Analysis
+
+**Overview**  
+This query extracts task and event-level data from a CAFM system to provide visibility into task history, event logging, and operational activity.
+
+**Purpose**
+- Track events linked to tasks (e.g. updates, comments, status changes)  
+- Analyse PPM-related activity across tasks and event logs  
+- Provide a full audit trail of task interactions for reporting and analysis  
+
+**Key Features**
+- Combines task, building, contract, and event data  
+- Links task records with event history for deeper insight  
+- Formats date and time fields for reporting (DD/MM/YYYY HH:MM)  
+- Applies conditional filtering for:
+  - PPM task types  
+  - PPM-related caller sources  
+- Uses parameterised filtering for region/building codes (anonymised)  
+
+**Tables Used**
+- F_TASKS  
+- FLOCATE  
+- F_BD_DETAILS  
+- F_CONTRACT  
+- F_EVENTS  
+- FINFILE  
+
+**Skills Demonstrated**
+- SQL joins across multiple relational tables  
+- Handling event-driven data and audit logs  
+- Date/time formatting and transformation  
+- Conditional filtering with AND/OR logic  
+- Parameterisation for reusable queries  
+- Structuring outputs for reporting (Power BI / operational dashboards)  
+
+**File**
+`Task_Event_Analysis.sql`
