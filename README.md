@@ -157,6 +157,9 @@ This query extracts task and event-level data from a CAFM system to provide visi
 - Parameterisation for reusable queries  
 - Structuring outputs for reporting (Power BI / operational dashboards)
 
+**File**
+`Task_Event_Analysis.sql`
+
 ### Task Resource and Lifecycle Analysis
 
 **Overview**  
@@ -197,6 +200,3 @@ This query analyses the full lifecycle of tasks within a CAFM system, including 
 
 **File**
 `Task_Resource_Analysis.sql`
-
-**File**
-`Task_Event_Analysis.sql`
