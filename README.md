@@ -50,3 +50,38 @@ Right now I’m focusing on:
 - Writing cleaner and more structured SQL
 - Getting more comfortable with advanced query patterns
 - Building more realistic, end-to-end examples of data work
+
+
+## Projects
+
+### Account Licence Management
+
+**Overview**  
+This query extracts account and licence information from a CAFM system to support user management and licence auditing.
+
+**Purpose**
+- Identify which users are assigned which licences  
+- Monitor account statuses (locked / disabled)  
+- Track account creation and modification details  
+
+**Key Features**
+- Joins account data with licence tables
+- Converts system dates into readable format (DD/MM/YYYY)
+- Flags account status:
+  - Locked (Yes/No)
+  - Disabled (Yes/No)
+- Highlights account creation and modification ownership
+
+**Tables Used**
+- dbo.Accounts
+- dbo.AccountsUserLicenceTypes
+- dbo.UserLicenceTypes
+
+**Skills Demonstrated**
+- SQL joins (LEFT JOIN)
+- Data transformation (date formatting)
+- Conditional logic (CASE statements)
+- Data presentation for reporting
+
+**File**
+`User_Licence.sql`
